@@ -63,7 +63,6 @@ const Header = (props: HeaderProps) => {
   return (
     <Flex
       as="header"
-      position="fixed"
       w="100%"
       bg={useColorModeValue("#F1E7DB", "#202022")}
       css={{ backdropFilter: "blur(10px)" }}
@@ -103,7 +102,7 @@ const Header = (props: HeaderProps) => {
         mt={{ base: 4, md: 0 }}
       >
         <LinkItem href="/works" path={path} target="_self">
-          Projects
+          Work
         </LinkItem>
         <LinkItem
           href="https://github.com/NicolasGHS/portfolio.git"
@@ -130,9 +129,9 @@ const Header = (props: HeaderProps) => {
             <Portal>
               <Menu.Positioner>
                 <Menu.Content>
-                  <Menu.Item value="projects">
-                    <Link as={NextLink} href="/projects">
-                      Projects
+                  <Menu.Item value="work">
+                    <Link as={NextLink} href="/work">
+                      Work
                     </Link>
                   </Menu.Item>
                   <Menu.Item value="source">
