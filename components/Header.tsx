@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
+
 import {
-  Container,
   Box,
   Link,
   Stack,
@@ -17,7 +18,21 @@ import { useColorModeValue } from "./ui/color-mode";
 import NextLink from "next/link";
 import ThemeToggleButton from "./Theme-Toggle";
 
-const LinkItem = ({ href, path, target, children, ...props }) => {
+interface LinkItemProps {
+  href: string;
+  path: string;
+  target?: string;
+  children: React.ReactNode;
+  [key: string]: any;
+}
+
+const LinkItem = ({
+  href,
+  path,
+  target,
+  children,
+  ...props
+}: LinkItemProps) => {
   const active = path === href;
   const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
   return (
@@ -35,8 +50,16 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
-const Header = (props) => {
+interface HeaderProps {
+  path: string;
+  [key: string]: any;
+}
+
+const Header = (props: HeaderProps) => {
   const { path } = props;
+  const [hover, setHover] = React.useState(false);
+  const defaultSpanColor = useColorModeValue("gray.800", "whiteAlpha.900");
+
   return (
     <Flex
       as="header"
@@ -56,8 +79,19 @@ const Header = (props) => {
           size="lg"
           letterSpacing={"tighter"}
           color={useColorModeValue("gray.800", "whiteAlpha.900")}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          cursor="pointer"
         >
-          Nicolas GHS
+          Nicolas{" "}
+          <Box
+            as="span"
+            transition="all 0.3s cubic-bezier(.4,0,.2,1)"
+            fontWeight="bold"
+            color={hover ? "teal.500" : defaultSpanColor}
+          >
+            {hover ? "Ghyselincks" : "GHS"}
+          </Box>
         </Heading>
       </Flex>
       <Stack
