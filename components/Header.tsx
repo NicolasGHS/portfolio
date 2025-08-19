@@ -82,15 +82,17 @@ const Header = (props: HeaderProps) => {
           onMouseLeave={() => setHover(false)}
           cursor="pointer"
         >
-          Nicolas{" "}
-          <Box
-            as="span"
-            transition="all 0.3s cubic-bezier(.4,0,.2,1)"
-            fontWeight="bold"
-            color={hover ? "teal.500" : defaultSpanColor}
-          >
-            {hover ? "Ghyselincks" : "GHS"}
-          </Box>
+          <Link href="/" _hover={{ textDecoration: "none" }}>
+            Nicolas{" "}
+            <Box
+              as="span"
+              transition="all 0.3s cubic-bezier(.4,0,.2,1)"
+              fontWeight="bold"
+              color={hover ? "teal.500" : defaultSpanColor}
+            >
+              {hover ? "Ghyselincks" : "GHS"}
+            </Box>
+          </Link>
         </Heading>
       </Flex>
       <Stack
