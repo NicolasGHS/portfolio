@@ -2,29 +2,29 @@ export const projects = [
 	{
 		id: 1,
 		title: "Portfolio Website",
-		description: "",
+		description: "My personal website showing my experience and skills.",
 		image: "",
-		link: "",
+		link: "/works/portfolio",
 		visibility: true,
 		status: "in-progress",
-		source: ""
+		source: "https://github.com/NicolasGHS/portfolio"
 	},
 	{
 		id: 2,
 		title: "Cueloops",
-		description: "",
+		description: "A website that gives the power of git to musicians. It's a github platform for where music is placed and others can contribute to the song.",
 		image: "",
-		link: "",
+		link: "/works/cueloops",
 		visibility: false,
 		status: "in-progress",
-		source: ""
+		source: "https://github.com/orgs/cueloops/repositories"
 	},
 	{
 		id: 3,
 		title: "Checklist",
 		description: "A things3 alternative todo application.",
 		image: "",
-		link: "",
+		link: "/works/checklist",
 		visibility: true,
 		status: "in-progress",
 		source: "https://github.com/NicolasGHS/checklist"
@@ -32,9 +32,9 @@ export const projects = [
 	{
 		id: 4,
 		title: "Nerdlab",
-		description: "",
+		description: "A website made for Nerdlab explaining what it is.",
 		image: "",
-		link: "",
+		link: "/works/nerdlab",
 		visibility: true,
 		status: "in-progress",
 		source: "https://github.com/NicolasGHS/nerdlab"
@@ -42,9 +42,9 @@ export const projects = [
 	{
 		id: 5,
 		title: "Disclone",
-		description: "",
+		description: "Disclone is a discord clone made for a school project.",
 		image: "",
-		link: "",
+		link: "/works/disclone",
 		visibility: true,
 		status: "in-progress",
 		source: "https://github.com/NicolasGHS/disclone"
@@ -52,9 +52,9 @@ export const projects = [
 	{
 		id: 6,
 		title: "Quiz-app",
-		description: "",
+		description: "A app that makes quizzes for a course and where students can compete with each other.",
 		image: "",
-		link: "",
+		link: "/works/quiz-app",
 		visibility: true,
 		status: "in-progress",
 		source: "https://github.com/NicolasGHS/quiz-app"
@@ -62,9 +62,9 @@ export const projects = [
 	{
 		id: 7,
 		title: "Gentse feesten",
-		description: "",
+		description: "A website made for Gentse feesten 2023 as a school project.",
 		image: "",
-		link: "",
+		link: "/works/gentse-feesten",
 		visibility: true,
 		status: "done",
 		source: "https://github.com/NicolasGHS/gentse-feesten"
@@ -72,9 +72,9 @@ export const projects = [
 	{
 		id: 8,
 		title: "Lightopia",
-		description: "",
+		description: "A website made for Lightopia as a school project.",
 		image: "",
-		link: "",
+		link: "/works/lightopia",
 		visibility: true,
 		status: "done",
 		source: "https://github.com/NicolasGHS/lightopia"
@@ -82,9 +82,9 @@ export const projects = [
 	{
 		id: 9,
 		title: "Receptweb",
-		description: "",
+		description: "A CRUD API with a frontend for a school project.",
 		image: "",
-		link: "",
+		link: "/works/receptweb",
 		visibility: true,
 		status: "done",
 		source: "https://github.com/NicolasGHS/receptweb"
@@ -92,9 +92,9 @@ export const projects = [
 	{
 		id: 10,
 		title: "PGM-platform",
-		description: "",
+		description: "This is a platform for a major in Artevelde.",
 		image: "",
-		link: "",
+		link: "/works/pgm-platform",
 		visibility: true,
 		status: "done",
 		source: "https://github.com/NicolasGHS/pgm-platform"
@@ -104,17 +104,17 @@ export const projects = [
 		title: "Studio-clean",
 		description: "",
 		image: "",
-		link: "",
-		visibility: true,
+		link: "/works/studio-clean",
+		visibility: false,
 		status: "done",
 		source: "https://github.com/NicolasGHS/studio-clean"
 	},
 	{
 		id: 12,
 		title: "Just do It",
-		description: "",
+		description: "This is a API build for a todo application.",
 		image: "",
-		link: "",
+		link: "/works/just-do-it",
 		visibility: true,
 		status: "done",
 		source: "https://github.com/NicolasGHS/just-do-it"

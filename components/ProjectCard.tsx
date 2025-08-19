@@ -1,6 +1,13 @@
 import { Box, Image, Text, Link as ChakraLink } from "@chakra-ui/react";
 
-const ProjectCard = ({ title, description, image, link }) => {
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+};
+
+const ProjectCard = ({ title, description, image, link }: ProjectCardProps) => {
   return (
     <Box
       borderWidth="1px"
