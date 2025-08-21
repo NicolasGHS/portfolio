@@ -11,8 +11,10 @@ import {
   Menu,
   Button,
   Portal,
+  ClientOnly,
+  Skeleton,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoLogoGithub } from "react-icons/io5";
 import { useColorModeValue } from "./ui/color-mode";
 import NextLink from "next/link";
@@ -56,8 +58,16 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-  const { path } = props;
   const [hover, setHover] = React.useState(false);
+
+  return (
+    <ClientOnly fallback={<Skeleton height="16" />}>
+      <HeaderContent hover={hover} setHover={setHover} {...props} />
+    </ClientOnly>
+  );
+};
+
+const HeaderContent = ({ path, hover, setHover, ...props }: HeaderProps & { hover: boolean; setHover: (hover: boolean) => void }) => {
   const defaultSpanColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   return (
@@ -125,7 +135,7 @@ const Header = (props: HeaderProps) => {
           <Menu.Root>
             <Menu.Trigger asChild>
               <Button variant="outline" size="sm">
-                <HamburgerIcon />
+                <HiOutlineMenuAlt3 />
               </Button>
             </Menu.Trigger>
             <Portal>
