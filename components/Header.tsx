@@ -67,105 +67,116 @@ const Header = (props: HeaderProps) => {
   );
 };
 
-const HeaderContent = ({ path, hover, setHover, ...props }: HeaderProps & { hover: boolean; setHover: (hover: boolean) => void }) => {
+const HeaderContent = ({
+  path,
+  hover,
+  setHover,
+  ...props
+}: HeaderProps & { hover: boolean; setHover: (hover: boolean) => void }) => {
   const defaultSpanColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   return (
-    <Flex
+    <Box
       as="header"
       w="100%"
       bg={useColorModeValue("#F1E7DB", "#202022")}
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
-      align="center"
-      justify="space-between"
-      p={2}
       {...props}
     >
-      <Flex align="center" mr={5}>
-        <Heading
-          as="h1"
-          size="lg"
-          letterSpacing={"tighter"}
-          color={useColorModeValue("gray.800", "whiteAlpha.900")}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          cursor="pointer"
-        >
-          <Link href="/" _hover={{ textDecoration: "none" }}>
-            Nicolas{" "}
-            <Box
-              as="span"
-              transition="all 0.3s cubic-bezier(.4,0,.2,1)"
-              fontWeight="bold"
-              color={hover ? "teal.500" : defaultSpanColor}
-            >
-              {hover ? "Ghyselincks" : "GHS"}
-            </Box>
-          </Link>
-        </Heading>
-      </Flex>
-      <Stack
-        direction={{ base: "column", md: "row" }}
-        display={{ base: "none", md: "flex" }}
-        width={{ base: "full", md: "auto" }}
-        alignItems="center"
-        flexGrow={1}
-        mt={{ base: 4, md: 0 }}
+      <Flex
+        maxW="1200px"
+        mx="auto"
+        px={4}
+        py={2}
+        align="center"
+        justify="space-between"
       >
-        <LinkItem href="/works" path={path} target="_self">
-          Work
-        </LinkItem>
-        <LinkItem
-          href="https://github.com/NicolasGHS/portfolio.git"
-          path={path}
-          target="_blank"
-          display="inline-flex"
+        <Flex align="center" mr={5}>
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={"tighter"}
+            color={useColorModeValue("gray.800", "whiteAlpha.900")}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            cursor="pointer"
+          >
+            <Link href="/" _hover={{ textDecoration: "none" }}>
+              Nicolas{" "}
+              <Box
+                as="span"
+                transition="all 0.3s cubic-bezier(.4,0,.2,1)"
+                fontWeight="bold"
+                color={hover ? "teal.500" : defaultSpanColor}
+              >
+                {hover ? "Ghyselincks" : "GHS"}
+              </Box>
+            </Link>
+          </Heading>
+        </Flex>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          display={{ base: "none", md: "flex" }}
+          width={{ base: "full", md: "auto" }}
           alignItems="center"
-          style={{ gap: 4 }}
-          pl={2}
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
         >
-          <IoLogoGithub />
-          Source
-        </LinkItem>
-      </Stack>
-      <Flex align="center">
-        <ThemeToggleButton />
-        <Box ml={2} display={{ base: "inline-block", md: "none" }}>
-          <Menu.Root>
-            <Menu.Trigger asChild>
-              <Button variant="outline" size="sm">
-                <HiOutlineMenuAlt3 />
-              </Button>
-            </Menu.Trigger>
-            <Portal>
-              <Menu.Positioner>
-                <Menu.Content>
-                  <Menu.Item value="work">
-                    <Link as={NextLink} href="/work">
-                      Work
-                    </Link>
-                  </Menu.Item>
-                  <Menu.Item value="source">
-                    <Link
-                      as={NextLink}
-                      href="https://github.com/NicolasGHS/portfolio.git"
-                      target="_blank"
-                      display="inline-flex"
-                      alignItems="center"
-                      style={{ gap: 4 }}
-                    >
-                      <IoLogoGithub />
-                      Source
-                    </Link>
-                  </Menu.Item>
-                </Menu.Content>
-              </Menu.Positioner>
-            </Portal>
-          </Menu.Root>
-        </Box>
+          <LinkItem href="/works" path={path} target="_self">
+            Work
+          </LinkItem>
+          <LinkItem
+            href="https://github.com/NicolasGHS/portfolio.git"
+            path={path}
+            target="_blank"
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
+          </LinkItem>
+        </Stack>
+        <Flex align="center">
+          <ThemeToggleButton />
+          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+            <Menu.Root>
+              <Menu.Trigger asChild>
+                <Button variant="outline" size="sm">
+                  <HiOutlineMenuAlt3 />
+                </Button>
+              </Menu.Trigger>
+              <Portal>
+                <Menu.Positioner>
+                  <Menu.Content>
+                    <Menu.Item value="work">
+                      <Link as={NextLink} href="/work">
+                        Work
+                      </Link>
+                    </Menu.Item>
+                    <Menu.Item value="source">
+                      <Link
+                        as={NextLink}
+                        href="https://github.com/NicolasGHS/portfolio.git"
+                        target="_blank"
+                        display="inline-flex"
+                        alignItems="center"
+                        style={{ gap: 4 }}
+                      >
+                        <IoLogoGithub />
+                        Source
+                      </Link>
+                    </Menu.Item>
+                  </Menu.Content>
+                </Menu.Positioner>
+              </Portal>
+            </Menu.Root>
+          </Box>
+        </Flex>
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 
