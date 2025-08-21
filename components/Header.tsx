@@ -152,7 +152,7 @@ const HeaderContent = ({
                 <Menu.Positioner>
                   <Menu.Content>
                     <Menu.Item value="work">
-                      <Link as={NextLink} href="/work">
+                      <Link as={NextLink} href="/works">
                         Work
                       </Link>
                     </Menu.Item>

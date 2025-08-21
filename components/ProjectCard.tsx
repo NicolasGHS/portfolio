@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, image, link }: ProjectCardProps) => {
       p={4}
       _hover={{ boxShadow: "lg" }}
     >
-      <Image src={image} alt={title} borderRadius="md" mb={3} />
+      {image && <Image src={image} alt={title} borderRadius="md" mb={3} />}
       <Text fontSize="xl" fontWeight="bold">
         {title}
       </Text>
