@@ -17,25 +17,34 @@ export const Header = () => {
       <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/works" passHref legacyBehavior>
-              <NavigationMenuLink className="px-3 py-2 rounded hover:bg-muted transition-colors">
+            <NavigationMenuLink asChild>
+              <Link
+                href="/works"
+                className="px-3 py-2 rounded hover:bg-muted transition-colors"
+              >
                 Work
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/skills" passHref legacyBehavior>
-              <NavigationMenuLink className="px-3 py-2 rounded hover:bg-muted transition-colors">
+            <NavigationMenuLink asChild>
+              <Link
+                href="/skills"
+                className="px-3 py-2 rounded hover:bg-muted transition-colors"
+              >
                 Skills
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/skills" passHref legacyBehavior>
-              <NavigationMenuLink className="px-3 py-2 rounded hover:bg-muted transition-colors flex gap-2 items-center">
-                <p>Source</p>
-              </NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink asChild>
+              <Link
+                href="/skills"
+                className="px-3 py-2 rounded hover:bg-muted transition-colors flex gap-2 items-center"
+              >
+                Source
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
