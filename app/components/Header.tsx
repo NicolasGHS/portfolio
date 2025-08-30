@@ -6,6 +6,7 @@ import {Menu} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import Link from "next/link"
 import {NavigationItem} from "./NavigationItem"
+import {ModeToggle} from "@/components/mode-toggle"
 
 export const Header = () => {
 	return (
@@ -20,6 +21,7 @@ export const Header = () => {
 					<NavigationItem name="Source" link="/" />
 				</NavigationMenuList>
 			</NavigationMenu>
+			<ModeToggle />
 			<Button size="icon" variant="secondary" className="md:hidden">
 				<Menu />
 			</Button>
