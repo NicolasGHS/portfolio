@@ -7,6 +7,7 @@ export type Project = {
 	image: string;
 	link: string;
 	visibility: boolean;
+	forSchool: boolean;
 	status: string;
 	source: string;
 };
