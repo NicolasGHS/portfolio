@@ -2,6 +2,7 @@ export const projects = [
 	{
 		id: 1,
 		title: "Portfolio Website",
+		slug: "portfolio",
 		description: "My personal website showing my experience and skills.",
 		image: "",
 		link: "/works/portfolio",
@@ -12,6 +13,7 @@ export const projects = [
 	{
 		id: 2,
 		title: "Cueloops",
+		slug: "cueloops",
 		description:
 			"A website that gives the power of git to musicians. It's a github platform for where music is placed and others can contribute to the song.",
 		image: "",
@@ -23,6 +25,7 @@ export const projects = [
 	{
 		id: 3,
 		title: "Checklist",
+		slug: "checklist",
 		description: "A things3 alternative todo application.",
 		image: "",
 		link: "/works/checklist",
@@ -33,6 +36,7 @@ export const projects = [
 	{
 		id: 4,
 		title: "Nerdlab",
+		slug: "nerdlab",
 		description: "A website made for Nerdlab explaining what it is.",
 		image: "",
 		link: "/works/nerdlab",
@@ -43,6 +47,7 @@ export const projects = [
 	{
 		id: 5,
 		title: "Disclone",
+		slug: "disclone",
 		description: "Disclone is a discord clone made for a school project.",
 		image: "",
 		link: "/works/disclone",
@@ -53,6 +58,7 @@ export const projects = [
 	{
 		id: 6,
 		title: "Quiz-app",
+		slug: "quiz-app",
 		description:
 			"A app that makes quizzes for a course and where students can compete with each other.",
 		image: "",
@@ -64,6 +70,7 @@ export const projects = [
 	{
 		id: 7,
 		title: "Gentse feesten",
+		slug: "gentse-feesten",
 		description: "A website made for Gentse feesten 2023 as a school project.",
 		image: "/images/gentse-feesten/gentse-feesten_image1.png",
 		link: "/works/gentse-feesten",
@@ -74,6 +81,7 @@ export const projects = [
 	{
 		id: 8,
 		title: "Lightopia",
+		slug: "lightopia",
 		description: "A website made for Lightopia as a school project.",
 		image: "/images/lightopia/lightopia_image1.png",
 		link: "/works/lightopia",
@@ -84,6 +92,7 @@ export const projects = [
 	{
 		id: 9,
 		title: "Receptweb",
+		slug: "receptweb",
 		description: "A CRUD API with a frontend for a school project.",
 		image: "/images/receptweb/receptweb_image1.png",
 		link: "/works/receptweb",
@@ -94,6 +103,7 @@ export const projects = [
 	{
 		id: 10,
 		title: "PGM-platform",
+		slug: "pgm-platform",
 		description: "This is a platform for a major in Artevelde.",
 		image: "",
 		link: "/works/pgm-platform",
@@ -104,6 +114,7 @@ export const projects = [
 	{
 		id: 11,
 		title: "Studio-clean",
+		slug: "studio-clean",
 		description: "",
 		image: "",
 		link: "/works/studio-clean",
@@ -114,6 +125,7 @@ export const projects = [
 	{
 		id: 12,
 		title: "Just do It",
+		slug: "just-do-it",
 		description: "This is a API build for a todo application.",
 		image: "",
 		link: "/works/just-do-it",
