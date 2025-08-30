@@ -1,14 +1,21 @@
 "use client";
 
 import {useParams} from "next/navigation";
+import {projects} from "@/data/projects";
+import {Project} from "@/types/projects";
 
-export default function Project() {
-	const {slug} = useParams();
+export default function ProjectPage() {
+	const {slug} = useParams(); // haalt de slug uit de URL
+	const project: Project | undefined = projects.find(p => p.slug === slug);
 
-	console.log("slug: ", slug);
+	if (!project) {
+		return <div>Project niet gevonden</div>;
+	}
+
 	return (
 		<div>
-			<p>Project</p>
+			<h1>{project.title}</h1>
+			<p>{project.description}</p>
 		</div>
 	);
 }
