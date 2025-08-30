@@ -17,7 +17,7 @@ export const Header = () => {
 				<NavigationMenuList>
 					<NavigationItem name="Works" link="/works" />
 					<NavigationItem name="Skills" link="/skills" />
-					<NavigationItem name="Source" link="/skills" />
+					<NavigationItem name="Source" link="/" />
 				</NavigationMenuList>
 			</NavigationMenu>
 			<Button size="icon" variant="secondary" className="md:hidden">

@@ -15,7 +15,7 @@ export const NavigationItem = ({name, link}: ItemProps) => {
 			<NavigationMenuLink asChild>
 				<Link
 					href={link}
-					className="px-3 py-2 rounded hover:bg-muted transition-colors"
+					className="px-3 py-2 rounded hover:bg-muted transition-colors hover:underline underline-offset-4"
 				>
 					{name}
 				</Link>
