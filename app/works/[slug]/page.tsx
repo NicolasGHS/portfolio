@@ -10,7 +10,7 @@ export default function ProjectPage() {
 	const project: Project | undefined = projects.find(p => p.slug === slug);
 
 	if (!project) {
-		return <div>Project niet gevonden</div>;
+		return <div>Project not found!</div>;
 	}
 
 	return (
