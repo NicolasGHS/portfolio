@@ -6,11 +6,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="w-full flex justify-between items-center py-4 px-6">
+    <header className="w-full flex justify-around gap-8 items-center py-4 px-6">
       <Link href="/" className="font-bold text-2xl">
         Nicolas GHS
       </Link>
