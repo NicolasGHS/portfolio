@@ -20,7 +20,7 @@ export const ProjectCard = ({project}: ProjectCardProps) => {
 			<CardContent className="px-0">
 				<img
 					// src="https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto"
-					src={project.image}
+					src={project.tumbnail}
 					alt="Banner"
 					className="aspect-video h-70 rounded-t-xl object-cover"
 				/>
