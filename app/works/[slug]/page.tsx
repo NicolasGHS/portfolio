@@ -18,13 +18,13 @@ export default function ProjectPage() {
 
 	return (
 		<div>
-			<div>
+			<div className="flex gap-3 items-center">
 				<ProjectBreadcrumb title={project.title} />
 				{project.forSchool && <SchoolBadge />}
 				<StatusBadge status={project.status} />
 			</div>
-			<h1 className="text-2xl">{project.title}</h1>
-			<p>{project.description}</p>
+			<h1 className="text-2xl mt-6 mb-6">{project.title}</h1>
+			<p className="mb-4">{project.description}</p>
 			{/* {project.images && <ProjectImages images={project.images} />} */}
 			<ProjectImages images={project.images} />
 		</div>
