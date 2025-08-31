@@ -16,7 +16,7 @@ export const NavigationItem = ({name, link, isActive}: ItemProps) => {
 			<NavigationMenuLink asChild>
 				<Link
 					href={link}
-					className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""} hover:bg-muted transition-colors hover:underline underline-offset-4`}
+					className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
 				>
 					{name}
 				</Link>
