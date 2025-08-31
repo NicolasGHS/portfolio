@@ -33,7 +33,11 @@ export const Header = () => {
 						link="/skills"
 						isActive={pathname == "/skills"}
 					/>
-					<NavigationItem name="Source" link="/" isActive={false} />
+					<NavigationItem
+						name="Source"
+						link="https://github.com/NicolasGHS/portfolio.git"
+						isActive={false}
+					/>
 				</NavigationMenuList>
 			</NavigationMenu>
 			<ModeToggle />
