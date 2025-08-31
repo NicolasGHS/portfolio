@@ -1,14 +1,21 @@
+"use client";
+
 import {
 	NavigationMenu,
 	NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import {Menu} from "lucide-react"
-import {Button} from "@/components/ui/button"
-import Link from "next/link"
-import {NavigationItem} from "./NavigationItem"
-import {ModeToggle} from "@/components/mode-toggle"
+} from "@/components/ui/navigation-menu";
+import {Menu} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
+import {NavigationItem} from "./NavigationItem";
+import {ModeToggle} from "@/components/mode-toggle";
+import {usePathname} from "next/navigation";
 
 export const Header = () => {
+	const pathname = usePathname();
+
+	console.log("pad: ", pathname);
+
 	return (
 		<header className="w-full flex justify-around gap-8 items-center py-4 px-6">
 			<Link href="/" className="font-bold text-2xl">
@@ -16,9 +23,17 @@ export const Header = () => {
 			</Link>
 			<NavigationMenu className="hidden md:block">
 				<NavigationMenuList>
-					<NavigationItem name="Works" link="/works" />
-					<NavigationItem name="Skills" link="/skills" />
-					<NavigationItem name="Source" link="/" />
+					<NavigationItem
+						name="Works"
+						link="/works"
+						isActive={pathname == "/works"}
+					/>
+					<NavigationItem
+						name="Skills"
+						link="/skills"
+						isActive={pathname == "/skills"}
+					/>
+					<NavigationItem name="Source" link="/" isActive={false} />
 				</NavigationMenuList>
 			</NavigationMenu>
 			<ModeToggle />
@@ -26,5 +41,5 @@ export const Header = () => {
 				<Menu />
 			</Button>
 		</header>
-	)
-}
+	);
+};
