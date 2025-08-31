@@ -5,6 +5,8 @@ import {projects} from "@/data/projects";
 import {Project} from "@/types/projects";
 import {SchoolBadge} from "@/components/badges/SchoolBadge";
 import {StatusBadge} from "@/components/badges/StatusBadge";
+import {ProjectBreadcrumb} from "@/components/ProjectBreadcrumb";
+import {ProjectImages} from "@/components/ProjectImages";
 
 export default function ProjectPage() {
 	const {slug} = useParams();
@@ -17,11 +19,14 @@ export default function ProjectPage() {
 	return (
 		<div>
 			<div>
+				<ProjectBreadcrumb title={project.title} />
 				{project.forSchool && <SchoolBadge />}
 				<StatusBadge status={project.status} />
 			</div>
-			<h1>{project.title}</h1>
+			<h1 className="text-2xl">{project.title}</h1>
 			<p>{project.description}</p>
+			{/* {project.images && <ProjectImages images={project.images} />} */}
+			<ProjectImages images={project.images} />
 		</div>
 	);
 }

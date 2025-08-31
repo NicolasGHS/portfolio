@@ -4,7 +4,7 @@ export type Project = {
 	slug: string;
 	description: string;
 	tumbnail: string;
-	image: string;
+	images: string[];
 	link: string;
 	visibility: boolean;
 	forSchool: boolean;
