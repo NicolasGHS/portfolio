@@ -15,8 +15,8 @@ export const ProjectImages = ({images}: ProjectImagesProps) => {
 		<div>
 			<Carousel>
 				<CarouselContent>
-					{images.map(image => (
-						<CarouselItem>
+					{images.map((image, index) => (
+						<CarouselItem key={index}>
 							<img src={image} />
 						</CarouselItem>
 					))}
