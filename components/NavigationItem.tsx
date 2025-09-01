@@ -19,14 +19,14 @@ export const NavigationItem = ({name, link, isActive, isSource}: ItemProps) => {
 					<Link
 						href={link}
 						target="_blank"
-						className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
+						className={`px-3 py-2 rounded transition-colors hover:underline underline-offset-4 ${isActive ? "bg-purple text-white" : ""}`}
 					>
 						{name}
 					</Link>
 				) : (
 					<Link
 						href={link}
-						className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
+						className={`px-3 py-2 rounded transition-colors hover:underline underline-offset-4 ${isActive ? "bg-purple text-white" : ""}`}
 					>
 						{name}
 					</Link>
