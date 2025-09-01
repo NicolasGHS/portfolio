@@ -120,7 +120,7 @@ export const projects = [
 		link: "/works/lightopia",
 		visibility: true,
 		forSchool: true,
-		status: "done",
+		status: "in-progress",
 		source: "https://github.com/NicolasGHS/lightopia",
 	},
 	{

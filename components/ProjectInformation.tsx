@@ -30,19 +30,29 @@ export const ProjectInformation = ({
 	}, [technology]);
 
 	return (
-		<div className="mb-5">
+		<div className="mb-5 flex flex-col gap-2">
 			<div className="flex gap-3 items-center">
-				<p>Source</p>
-				<Link href={source} target="_blank" className="hover:underline">
+				<p className="bg-green-dark text-green-light">Source</p>
+				<Link
+					href={source}
+					target="_blank"
+					className="hover:underline text-blue"
+				>
 					{source}
 				</Link>
 			</div>
-			<p>Platform</p>
+			<div className="flex gap-3 items-center">
+				<p className="bg-green-dark text-green-light">Platform</p>
+				<p></p>
+			</div>
 			<div className="flex gap-2">
-				<p>Stack</p>
-				<div className="flex gap-3">
+				<p className="bg-green-dark text-green-light">Stack</p>
+				<div className="flex">
 					{stack.map((s, index) => (
-						<p key={index}>{s}</p>
+						<p key={index}>
+							{s}
+							{index < stack.length - 1 && "/"}
+						</p>
 					))}
 				</div>
 			</div>
