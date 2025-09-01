@@ -1,7 +1,7 @@
 export const technologies = [
 	{
 		id: 1,
-		name: "Nextjs",
+		name: "React",
 	},
 	{
 		id: 2,
@@ -30,5 +30,41 @@ export const technologies = [
 	{
 		id: 8,
 		name: "SQL",
+	},
+	{
+		id: 9,
+		name: "Wails",
+	},
+	{
+		id: 10,
+		name: "Sqlite",
+	},
+	{
+		id: 11,
+		name: "React Native",
+	},
+	{
+		id: 12,
+		name: "Supabase",
+	},
+	{
+		id: 13,
+		name: "HTML",
+	},
+	{
+		id: 14,
+		name: "CSS",
+	},
+	{
+		id: 15,
+		name: "Javascript",
+	},
+	{
+		id: 16,
+		name: "Express",
+	},
+	{
+		id: 17,
+		name: "Hygraph",
 	},
 ];
