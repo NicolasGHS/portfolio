@@ -8,18 +8,29 @@ type ItemProps = {
 	name: string;
 	link: string;
 	isActive: boolean;
+	isSource: boolean;
 };
 
-export const NavigationItem = ({name, link, isActive}: ItemProps) => {
+export const NavigationItem = ({name, link, isActive, isSource}: ItemProps) => {
 	return (
 		<NavigationMenuItem>
 			<NavigationMenuLink asChild>
-				<Link
-					href={link}
-					className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
-				>
-					{name}
-				</Link>
+				{isSource ? (
+					<Link
+						href={link}
+						target="_blank"
+						className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
+					>
+						{name}
+					</Link>
+				) : (
+					<Link
+						href={link}
+						className={`px-3 py-2 rounded ${isActive ? "bg-purple-400" : ""}  transition-colors hover:underline underline-offset-4`}
+					>
+						{name}
+					</Link>
+				)}
 			</NavigationMenuLink>
 		</NavigationMenuItem>
 	);
