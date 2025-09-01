@@ -26,7 +26,7 @@ export default function ProjectPage() {
 			</div>
 			<h1 className="text-2xl mt-6 mb-6">{project.title}</h1>
 			<p className="mb-4">{project.description}</p>
-			<ProjectInformation technology={project.stack} />
+			<ProjectInformation technology={project.stack} source={project.source} />
 			{/* {project.images && <ProjectImages images={project.images} />} */}
 			<ProjectImages images={project.images} />
 		</div>

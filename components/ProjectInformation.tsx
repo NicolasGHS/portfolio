@@ -2,12 +2,17 @@
 
 import {useEffect, useState} from "react";
 import {technologies} from "@/data/technology";
+import Link from "next/link";
 
 type ProjectInformationProps = {
 	technology: number[];
+	source: string;
 };
 
-export const ProjectInformation = ({technology}: ProjectInformationProps) => {
+export const ProjectInformation = ({
+	technology,
+	source,
+}: ProjectInformationProps) => {
 	const [stack, setStack] = useState<string[]>([]);
 
 	const getTechnologyById = (id: number) => {
@@ -24,11 +29,14 @@ export const ProjectInformation = ({technology}: ProjectInformationProps) => {
 		getStack();
 	}, [technology]);
 
-	console.log("stack: ", stack);
-
 	return (
-		<div>
-			<p>Source</p>
+		<div className="mb-5">
+			<div className="flex gap-3 items-center">
+				<p>Source</p>
+				<Link href={source} target="_blank" className="hover:underline">
+					{source}
+				</Link>
+			</div>
 			<p>Platform</p>
 			<div className="flex gap-2">
 				<p>Stack</p>
