@@ -3,6 +3,7 @@ import {
 	NavigationMenuLink,
 } from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
+import {Github} from "lucide-react";
 
 type ItemProps = {
 	name: string;
@@ -19,8 +20,9 @@ export const NavigationItem = ({name, link, isActive, isSource}: ItemProps) => {
 					<Link
 						href={link}
 						target="_blank"
-						className={`px-3 py-2 rounded transition-colors hover:underline underline-offset-4 ${isActive ? "bg-purple text-white" : ""}`}
+						className={`px-3 py-2 flex gap-2 items-center rounded transition-colors hover:underline underline-offset-4 ${isActive ? "bg-purple text-white" : ""}`}
 					>
+						<Github className="w-5" />
 						{name}
 					</Link>
 				) : (
