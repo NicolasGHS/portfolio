@@ -137,7 +137,7 @@ export default function Home() {
 						{featuredProjects.map(project => (
 							<Card
 								key={project.id}
-								className="group hover:shadow-xl transition-all duration-300"
+								className="group hover:shadow-xl transition-all duration-300 flex flex-col h-full"
 							>
 								{project.tumbnail && (
 									<div className="relative overflow-hidden rounded-t-lg">
@@ -148,7 +148,7 @@ export default function Home() {
 										/>
 									</div>
 								)}
-								<CardHeader className="pb-3 sm:pb-6">
+								<CardHeader className="pb-3 sm:pb-6 flex-grow">
 									<div className="space-y-2">
 										<CardTitle className="text-lg sm:text-xl leading-tight">{project.title}</CardTitle>
 										<Badge
@@ -160,11 +160,11 @@ export default function Home() {
 											{project.status === "done" ? "Completed" : "In Progress"}
 										</Badge>
 									</div>
-									<CardDescription className="text-sm sm:text-base leading-relaxed mt-3 max-w-full sm:max-w-none">
+									<CardDescription className="text-sm sm:text-base leading-relaxed mt-3 max-w-full sm:max-w-none line-clamp-3">
 										{project.description}
 									</CardDescription>
 								</CardHeader>
-								<CardContent className="pt-0">
+								<CardContent className="pt-0 mt-auto">
 									<div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
 										{project.stack.slice(0, 3).map(techId => (
 											<Badge key={techId} variant="outline" className="text-xs">
