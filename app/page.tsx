@@ -57,7 +57,7 @@ export default function Home() {
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
-			<section className="relative py-20 lg:py-32 px-4">
+			<section className="relative min-h-screen flex items-center justify-center px-4">
 				<div className="container mx-auto text-center">
 					<div className="max-w-4xl mx-auto">
 						<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
