@@ -67,19 +67,34 @@ export default function Home() {
 							I am a Full-Stack Developer crafting modern web experiences with
 							passion for clean code and innovative solutions.
 						</p>
-						<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
-							<Button asChild size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3">
-								<Link href="/works">
-									View My Work <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+						<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0">
+							<Button
+								asChild
+								size="lg"
+								className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 min-w-0"
+							>
+								<Link
+									href="/works"
+									className="flex items-center justify-center"
+								>
+									<span className="sm:hidden">Work</span>
+									<span className="hidden sm:inline">View My Work</span>
+									<ArrowRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
 								</Link>
 							</Button>
 							<Button
 								asChild
 								variant="outline"
 								size="lg"
-								className="text-base sm:text-lg px-6 sm:px-8 py-3"
+								className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 min-w-0"
 							>
-								<Link href="/skills">Explore Skills</Link>
+								<Link
+									href="/skills"
+									className="flex items-center justify-center"
+								>
+									<span className="sm:hidden">Skills</span>
+									<span className="hidden sm:inline">Explore Skills</span>
+								</Link>
 							</Button>
 						</div>
 					</div>
@@ -87,8 +102,8 @@ export default function Home() {
 			</section>
 
 			{/* Skills Overview */}
-			<section className="py-12 sm:py-16 px-4 bg-muted/30">
-				<div className="container mx-auto">
+			<section className="py-12 sm:py-16 px-4 bg-muted/30 overflow-x-auto">
+				<div className="container mx-auto min-w-fit">
 					<div className="text-center mb-8 sm:mb-12">
 						<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
 							Technologies I Work With
@@ -98,13 +113,13 @@ export default function Home() {
 							stack
 						</p>
 					</div>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 min-w-0">
 						{techCategories.map(category => {
 							const Icon = category.icon;
 							return (
 								<Card
 									key={category.name}
-									className="text-center hover:shadow-lg transition-shadow"
+									className="text-center hover:shadow-lg transition-shadow min-w-[200px]"
 								>
 									<CardContent className="pt-4 sm:pt-6 pb-4 sm:pb-6">
 										<Icon className="h-8 w-8 sm:h-10 sm:w-10 mx-auto mb-3 sm:mb-4 text-primary" />
@@ -150,7 +165,9 @@ export default function Home() {
 								)}
 								<CardHeader className="pb-3 sm:pb-6 flex-grow">
 									<div className="space-y-2">
-										<CardTitle className="text-lg sm:text-xl leading-tight">{project.title}</CardTitle>
+										<CardTitle className="text-lg sm:text-xl leading-tight">
+											{project.title}
+										</CardTitle>
 										<Badge
 											variant={
 												project.status === "done" ? "default" : "secondary"
@@ -182,21 +199,31 @@ export default function Home() {
 											asChild
 											variant="outline"
 											size="sm"
-											className="flex-1 text-xs sm:text-sm"
+											className="flex-1 text-xs sm:text-sm min-w-0"
 										>
-											<Link href={project.link}>
-												View Details <ExternalLink className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+											<Link
+												href={project.link}
+												className="flex items-center justify-center"
+											>
+												<span className="truncate">View Details</span>
+												<ExternalLink className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
 											</Link>
 										</Button>
 										{project.source && (
-											<Button asChild variant="ghost" size="sm" className="flex-1 sm:flex-none sm:px-3">
+											<Button
+												asChild
+												variant="ghost"
+												size="sm"
+												className="flex-1 sm:flex-none sm:px-3 min-w-0"
+											>
 												<a
 													href={project.source}
 													target="_blank"
 													rel="noopener noreferrer"
+													className="flex items-center justify-center"
 												>
-													<Github className="sm:mr-0 mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-													<span className="sm:hidden">Source Code</span>
+													<Github className="sm:mr-0 mr-1 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+													<span className="sm:hidden truncate">Source</span>
 												</a>
 											</Button>
 										)}
@@ -206,9 +233,15 @@ export default function Home() {
 						))}
 					</div>
 					<div className="text-center mt-8 sm:mt-12">
-						<Button asChild variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8">
-							<Link href="/works">
-								View All Projects <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+						<Button
+							asChild
+							variant="outline"
+							size="lg"
+							className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 min-w-0"
+						>
+							<Link href="/works" className="flex items-center justify-center">
+								<span className="truncate">View All Projects</span>
+								<ArrowRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
 							</Link>
 						</Button>
 					</div>
@@ -227,23 +260,33 @@ export default function Home() {
 							Whether you have a question or just want to say hi, feel free to
 							reach out!
 						</p>
-						<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
-							<Button asChild size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3">
-								<a href="mailto:nicolas.goethals@example.com">Get In Touch</a>
+						<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0">
+							<Button
+								asChild
+								size="lg"
+								className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 min-w-0"
+							>
+								<a
+									href="mailto:nicolas.goethals@example.com"
+									className="flex items-center justify-center"
+								>
+									<span className="truncate">Get In Touch</span>
+								</a>
 							</Button>
 							<Button
 								asChild
 								variant="outline"
 								size="lg"
-								className="text-base sm:text-lg px-6 sm:px-8 py-3"
+								className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 min-w-0"
 							>
 								<a
 									href="https://github.com/NicolasGHS"
 									target="_blank"
 									rel="noopener noreferrer"
+									className="flex items-center justify-center"
 								>
-									<Github className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-									GitHub
+									<Github className="mr-1 sm:mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+									<span className="truncate">GitHub</span>
 								</a>
 							</Button>
 						</div>

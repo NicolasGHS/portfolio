@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {technologies} from "@/data/technology";
+import {Github, ExternalLink} from "lucide-react";
 import Link from "next/link";
 
 type ProjectInformationProps = {
@@ -36,9 +37,10 @@ export const ProjectInformation = ({
 				<Link
 					href={source}
 					target="_blank"
-					className="hover:underline text-blue"
+					className="hover:underline text-primary hover:text-primary/80 flex items-center gap-2 transition-colors"
 				>
 					{source}
+					<ExternalLink className="h-4 w-4" />
 				</Link>
 			</div>
 			<div className="flex gap-3 items-center">
