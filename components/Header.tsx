@@ -14,11 +14,12 @@ import {usePathname} from "next/navigation";
 export const Header = () => {
 	const pathname = usePathname();
 
-	console.log("pad: ", pathname);
-
 	return (
 		<header className="w-full flex justify-around gap-8 items-center py-4 px-6">
-			<Link href="/" className="font-bold text-2xl">
+			<Link
+				href="/"
+				className="font-bold text-2xl transition-transform duration-300 ease-in-out hover:scale-105 hover:text-primary"
+			>
 				Nicolas GHS
 			</Link>
 			<NavigationMenu className="hidden md:block">
