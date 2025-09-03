@@ -1,8 +1,25 @@
+"use client";
+
 import {technologies} from "@/data/technology";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {TechnologyModal} from "@/components/TechnologyModal";
+import {Technology} from "@/types/technology";
+import {useState} from "react";
 
 export default function Skills() {
+	const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleTechnologyClick = (technology: Technology) => {
+		setSelectedTechnology(technology);
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+		setSelectedTechnology(null);
+	};
 	// Group technologies by category
 	const groupedTechnologies = technologies.reduce(
 		(acc, tech) => {
@@ -38,7 +55,8 @@ export default function Skills() {
 									<Badge
 										key={tech.id}
 										variant="secondary"
-										className="text-sm py-1 px-3"
+										className="text-sm py-1 px-3 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+										onClick={() => handleTechnologyClick(tech)}
 									>
 										{tech.name}
 									</Badge>
@@ -48,6 +66,12 @@ export default function Skills() {
 					</Card>
 				))}
 			</div>
+
+			<TechnologyModal
+				isOpen={isModalOpen}
+				onClose={handleCloseModal}
+				technology={selectedTechnology}
+			/>
 		</div>
 	);
 }
