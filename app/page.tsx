@@ -65,7 +65,7 @@ export default function Home() {
 						</h1>
 						<p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
 							I am a Full-Stack Developer crafting modern web experiences with
-							passion for clean code and innovative solutions
+							passion for clean code and innovative solutions.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<Button asChild size="lg" className="text-lg px-8">
