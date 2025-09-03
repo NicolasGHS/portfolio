@@ -8,7 +8,8 @@ import {Technology} from "@/types/technology";
 import {useState} from "react";
 
 export default function Skills() {
-	const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
+	const [selectedTechnology, setSelectedTechnology] =
+		useState<Technology | null>(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const handleTechnologyClick = (technology: Technology) => {
@@ -33,19 +34,21 @@ export default function Skills() {
 	);
 
 	return (
-		<div className="container mx-auto px-4 py-8">
-			<div className="mb-8">
-				<h1 className="text-4xl font-bold mb-4">Skills & Technologies</h1>
-				<p className="text-muted-foreground text-lg">
+		<div className="container mx-auto px-4 py-6 sm:py-8">
+			<div className="mb-6 sm:mb-8">
+				<h1 className="text-3xl sm:text-4xl font-bold mb-4">
+					Skills & Technologies
+				</h1>
+				<p className="text-muted-foreground text-base sm:text-lg">
 					Here are the technologies and tools I work with.
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 				{Object.entries(groupedTechnologies).map(([category, techs]) => (
 					<Card key={category} className="h-fit">
-						<CardHeader>
-							<CardTitle className="text-xl font-semibold">
+						<CardHeader className="pb-3 sm:pb-6">
+							<CardTitle className="text-lg sm:text-xl font-semibold">
 								{category}
 							</CardTitle>
 						</CardHeader>
@@ -55,7 +58,7 @@ export default function Skills() {
 									<Badge
 										key={tech.id}
 										variant="secondary"
-										className="text-sm py-1 px-3 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+										className="text-xs sm:text-sm py-1 px-2 sm:px-3 cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
 										onClick={() => handleTechnologyClick(tech)}
 									>
 										{tech.name}
