@@ -60,7 +60,8 @@ export const TechnologyModal = ({
 					{projectsUsingTechnology.length === 0 ? (
 						<div className="text-center py-8 text-muted-foreground">
 							<p className="text-sm sm:text-base">
-								No public projects found using {technology.name}
+								No public projects found using {technology.name}. It is likely a
+								private project, but I am open to showing it if you contact me.
 							</p>
 						</div>
 					) : (
