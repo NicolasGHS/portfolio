@@ -84,4 +84,9 @@ export const technologies = [
 		name: "Hygraph",
 		category: "CMS",
 	},
+	{
+		id: 18,
+		name: "Laravel",
+		category: "Backend",
+	},
 ];

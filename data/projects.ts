@@ -204,4 +204,23 @@ export const projects = [
 		status: "done",
 		source: "https://github.com/NicolasGHS/just-do-it",
 	},
+	{
+		id: 13,
+		title: "Niche Community",
+		slug: "niche-community",
+		description:
+			"This project was made for a school project. It's a website for a niche community of choice. I choose to make a website for linux users to share their desktops and rice setups.",
+		stack: [18, 8],
+		images: [
+			"/images/niche-community/niche-community_image1.png",
+			"/images/niche-community/niche-community_image2.png",
+			"/images/niche-community/niche-community_image3.png",
+		],
+		tumbnail: "/images/niche-community/niche-community_image1.png",
+		link: "/works/niche-community",
+		visibility: true,
+		forSchool: true,
+		status: "done",
+		source: "https://github.com/NicolasGHS/niche-community",
+	},
 ];
